@@ -1,0 +1,315 @@
+html {
+   height: 100%;
+	margin-bottom: 0.01em;
+}
+
+body {
+    background-color: #fff;
+    color: #434343;
+    font-size: .85em;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+
+header{
+    background-color: white;
+}
+
+header, footer, hgroup
+nav, section {
+    display: block;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+
+/* main layout
+----------------------------------------------------------*/
+.outer-wrapper{
+    min-height: 100%;
+    background-color: #efeeef;     
+}
+.content-wrapper {
+    margin: 0;
+    padding:  10px 20px;
+    height:  100%;
+}
+
+#main {
+   
+	padding: 30px 0px 50px;
+    margin-left:  auto;
+    margin-right: auto;
+    width: 80%;
+    height: 80%;
+    
+}
+
+   
+footer {
+    background-color: #E2E2E2;
+    clear: both;
+    font-size: 0.8em;
+    height: 50px;
+    margin-top: 0px;
+    position: relative;
+    text-align: center;         
+}
+
+footer .footer-wrapper {
+    margin: 0;
+    padding:  3px 20px;
+}
+
+/*site title
+----------------------------------------------------------*/
+/*header h1.site-title a {
+    
+
+    background: url(fict_logo.png); 
+    width:147;
+    height:67;
+    margin-left:27px;
+}
+
+.site-title a, .site-title a:hover, .site-title a:active {
+ 
+    color: #449d44;
+    outline: none;
+    text-decoration: none;
+}*/
+.site-logo img {
+    margin-left: 24%;
+    margin-top:5%;
+}
+
+/* login
+----------------------------------------------------------*/
+ #login {
+    display: block;
+
+    margin:50px 4px 0px 5px;
+    text-align: right;
+}
+
+    #login a {
+        background-color: #5cb85c;
+        padding: 3px 4px;
+        text-decoration: none;
+    }
+
+ 
+    #login ul {
+        margin: 0;
+    }
+
+    #login li {
+        display: inline;
+        list-style: none;
+    }
+
+
+/* menu
+----------------------------------------------------------*/
+ul#menu {
+    font-size: 16pt;
+    font-weight: bold;
+    margin: 0;
+    text-align: left;
+    padding-left: 25px;
+}
+
+    ul#menu li {
+        display:block;
+        float: left;
+        text-align:center;
+        padding-right: 28px
+    }
+
+        ul#menu li a {
+            background: none;
+            color: #E2E2E2;
+            text-decoration: none;
+        }
+
+        ul#menu li a:hover {
+            color: rgb(180, 217, 178);
+            text-decoration: none;
+        }
+
+#myNavbar {
+     background-color: white;
+      border-color: white;
+ }
+nav.navbar.navbar-default {
+      background-color: white;
+      border-color: white;
+ }
+a.btn.btn-success.btn-lg {
+    color: white;
+}
+/* page elements
+----------------------------------------------------------*/
+
+/* Navigation */
+/*.navigation {
+    border-top: 5px solid rgb(226, 226, 226);
+    
+    
+    margin: 0;
+    padding:  0;
+    
+    display: table;
+    width: 100%;
+    
+    background-color: white;
+  
+}
+.navigation a {
+    
+    color: #E2E2E2;
+}
+*/
+/* page titles */
+hgroup.title {
+    margin-bottom: 10px;
+}
+
+hgroup.title h1, hgroup.title h2 {
+    display: inline;
+}
+
+hgroup.title h2 {
+    font-weight: normal;
+    margin-left: 3px;
+}
+
+/* features */
+section.feature {
+    /*width: 300px;*/
+    float: left;
+    padding: 10px;
+}
+
+
+.label {
+    font-weight: 700;
+}
+
+
+
+/* forms */
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+    fieldset legend {
+        display: none;
+    }
+    
+    fieldset ol {
+        padding: 0;
+        list-style: none;
+    }
+
+        fieldset ol li {
+            padding-bottom: 5px;
+        }
+
+    fieldset label {
+        display: block;
+        font-size: 1.2em;
+        font-weight: 600;
+    }
+
+    fieldset label.checkbox {
+        display: inline;
+    }
+
+    fieldset input[type="text"],
+    fieldset input[type="password"] {
+        border: 1px solid #e2e2e2;
+        color: #333;
+        font-size: 1em;
+        margin: 5px 0 6px 0;
+        padding: 5px;
+        width: 300px;
+    }
+
+        fieldset input[type="text"]:focus,
+        fieldset input[type="password"]:focus {
+            border: 1px solid #7ac0da;
+        }
+
+    fieldset input[type="submit"] {
+        background-color: rgb(92, 184, 92);
+        cursor: pointer;
+        font-size: 1em;
+        padding: 7px;
+        color: white;
+    }
+
+/* ajax login/registration dialog */
+.modal-popup {
+    font-size: 0.7em;
+}
+
+    .modal-popup input[type="text"],
+    .modal-popup input[type="password"] {
+        width: 90%;
+    }
+
+
+ul#social li {
+    display: inline;
+    list-style: none;
+}
+
+    ul#social li a {
+        color: #999;
+        text-decoration: none;
+    }
+
+
+
+
+    .carousel-inner img {
+      -webkit-filter: grayscale(90%);
+      filter: grayscale(90%); /* make all photos black and white */ 
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+  }
+  .carousel-caption h3 {
+      color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+      background: #2d2d30;
+      color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+  }
