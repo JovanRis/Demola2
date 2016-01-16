@@ -29,7 +29,7 @@
         </div>
         
         <?php
-        if($currentProject['fk_CompanyID'] == $userId || $_SESSION['userType'] == 'student'){ ?>
+        if($currentProject['fk_CompanyID'] == $userId || $userType == 'student'){ ?>
         <div>
         Comments:
         <?php 
