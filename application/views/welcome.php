@@ -24,7 +24,10 @@
                             else
                             {
                             ?>
-                                No one has sighen up.
+                             <div class="alert alert-success">
+                                <strong>No one has signed up!</strong> 
+                             </div>
+                              
                                 <?php 
                             }
                             ?>
@@ -46,7 +49,10 @@
                             else
                             {
                             ?>
-                                There are no comments.
+                              <div class="alert alert-success">
+                                No comments to display.
+                             </div>
+                                
                         </div>
                                 <?php
                             }
@@ -59,7 +65,12 @@
             }
             else
             {
-                echo "There are no active projects";
+                ?>
+                  <div class="alert alert-success">
+                    <strong>No active prijects to display.</strong> 
+                 </div>
+                                
+                <?php
             }
 
         }
