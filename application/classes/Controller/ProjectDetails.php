@@ -8,7 +8,7 @@ class Controller_ProjectDetails extends Controller {
 	    $post = $this->request->post();
 	    $session = Session::instance();
 	    //$this->request->query('p')
-	    print_r($session);
+	    //print_r($session);
 	    
 	    if(isset($post['submit']))
 	    {
@@ -25,22 +25,25 @@ class Controller_ProjectDetails extends Controller {
         {   //if signing up for project execute this
             if(isset($_SESSION['userId'])){
                 $r = Project::signUpForProject($this->request->query('signup'),$_SESSION['userId']);
+                $res = '';
                 if($r){
-                    echo "<div style ='margin:50px;'>Signed up successfully!</div>";
+                    $res = "<div style ='margin:50px;'>Signed up successfully!</div>";
                 }
                 else {
-                    echo "<div style ='margin:50px;'>Signup failed!</div>";
+                    $res = "<div style ='margin:50px;'>Signup failed!</div>";
                 }
             }
             else{
-                echo "<div style ='margin:50px;'>Please sign In</div>";             //ova ne se gleda bez margini
+                $res = "<div style ='margin:50px;'>Please sign In</div>";             //ova ne se gleda bez margini
             }
+            $this->response->body(View::factory('header').$res);
+                            header("Refresh:2; url=welcome");
         }
         else
         {
             $projectID =  $this->request->query('pid');
             $currentProject = Project::getProjectByID($projectID);
-            print_r($currentProject);
+            //print_r($currentProject);
             $companyDetails = Company::getCompanyInfo($currentProject['fk_CompanyID']);
             
             $this->response->body(View::factory('header').View::factory('projectDetails')

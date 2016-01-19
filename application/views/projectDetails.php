@@ -3,16 +3,14 @@
      <div class="panel panel-success">
        <div class="panel-heading"> <?php echo $currentProject['ProjectName'];?> </div>
        <div class="panel-body">
-          <?php echo $currentProject['Category']; ?> <br>
-          <?php echo $currentProject['Discription']; ?> <br>   
-          <?php echo $companyDetails['CompanyName'] ?> <br>
-          <?php echo $companyDetails['CompanyDetails'] ?> <br>
-          <div style = "height:200px; width: 350px;"><img src="<?php echo $companyDetails['imgUrl'] ?>" alt="companyImg" style="max-height:100%; max-width:100%;"></div>
-      
+            <div style = "height:200px; width: 350px; display:block; float: right;"><img src="<?php echo $companyDetails['imgUrl'] ?>" alt="companyImg" style="max-height:100%; max-width:100%;"></div>
+            Компанија: <?php echo $companyDetails['CompanyName'] ?> <br>
+            Категорија: <?php echo $currentProject['Category']; ?> <br>
+            Детали за компанијата: <?php echo $companyDetails['CompanyDetails'] ?> <br>
+            Опис: <?php echo $currentProject['Discription']; ?> <br> 
         </div>
-      </div>
-      
-        <div>
+        <div class="panel-footer" >
+                <div>
         Currently signed up:
         <?php 
         if(is_array($currentProject['SignedUp']))
@@ -23,10 +21,10 @@
         }
         else
         {
-            echo $currentProject['SignedUp'];    
+            echo $currentProject['SignedUp'].' </div>';    
         }
         ?>
-        </div>
+        
         
         <?php
         if($currentProject['fk_CompanyID'] == $userId || $userType == 'student'){ ?>
@@ -41,11 +39,17 @@
         }
         else
         {
-            echo $currentProject['Comments'];
+            echo $currentProject['Comments'].'</div>';
         }
-
         ?>
+        
         </div>
+        
+        
+      </div>
+      
+
+
         
         <?php } ?>
         

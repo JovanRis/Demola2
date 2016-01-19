@@ -10,6 +10,7 @@ class Controller_Welcome extends Controller {
 	    //print_r($session);
 	    $projects = array();
 	    $projects = MyDB::getCompletedProjects();
+	    
         if($session->get('userType') == 'student')
         {
             $projects = User::getActiveProjects($session->get('userId'));

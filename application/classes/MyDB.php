@@ -519,7 +519,7 @@ class MyDB extends Model
     public static function getCompletedProjects()
     {
         $sub = DB::select(array(DB::expr('COUNT(*)'),'cnt'))->from('SignUps')->where('fk_projectId', '=', DB::expr('p.id_pk'));
-        $result = DB::select('p.id_pk', 'p.ProjectName', 'p.Category', 'p.Discription', 'c.CompanyName', 'p.completed', array($sub, 'cnt'))
+        $result = DB::select('p.id_pk', 'p.ProjectName', 'p.Category', 'p.Discription', 'c.CompanyName', 'p.completed', 'p.sourceLink', array($sub, 'cnt'))
                     ->from(array('Project', 'p'))->join(array('Company', 'c'), 'LEFT')->on('p.fk_CompanyID', '=', 'c.id_pk')
                     ->where('completed', '=', '1')
                     ->execute();
@@ -654,8 +654,8 @@ class MyDB extends Model
         }*/
     }
     
-    public static function finishProject($projectID){
-        $result = DB::update('Project')->set(array('completed' => '1'))->where('Project.id_pk', '=', $projectID)->execute();
+    public static function finishProject($projectID,$sourceLink){
+        $result = DB::update('Project')->set(array('completed' => '1', 'sourceLink' => $sourceLink))->where('Project.id_pk', '=', $projectID)->execute();
         if($result == 1){
             return true;
         }

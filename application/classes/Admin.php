@@ -20,8 +20,8 @@ class Admin
         return MyDB::approveProject($projectID);
     }
     
-    public static function finishProject($projectID){
-        return MyDB::finishProject($projectID);
+    public static function finishProject($projectID,$sourceLink){
+        return MyDB::finishProject($projectID,$sourceLink);
     }
     
 }

@@ -50,25 +50,27 @@ class Controller_Admin extends Controller {
                     foreach($post['iCom'] as $idCom)
                     {
                         Admin::approveCompany($idCom);
-                        echo "Companies approved";
                     }
-    
+                    echo "Companies approved";
+                    header("Refresh:2; url=admin?p=null");
                 }
                 elseif(isset($post['submit-approveproject']))
                 {
                     foreach($post['iPro'] as $idPro)
                     {
                         Admin::approveProject($idPro);
-                        echo "Projects approved";
                     }
+                    echo "Projects approved";
+                    header("Refresh:2; url=admin?p=null");
                 }
                 elseif(isset($post['submit-finishproject']))
                 {
                     foreach($post['iPro'] as $idPro)
                     {
-                        Admin::finishProject($idPro);
-                         echo "Projects finished";
+                        Admin::finishProject($idPro,$post['linkPro'.$idPro]);
                     }
+                    echo "Projects finished";
+                    header("Refresh:2; url=admin?p=null");
                 }
             }
             $p = $this->request->query('p');

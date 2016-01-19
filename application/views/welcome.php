@@ -34,7 +34,7 @@
                         </div>
                         
                         <div>
-                            Comments:
+                            Коментари:
                             <?php 
                             if(is_array($project['Comments']))
                             {
@@ -50,7 +50,7 @@
                             {
                             ?>
                               <div class="alert alert-success">
-                                No comments to display.
+                                Нема Коментари.
                              </div>
                                 
                         </div>
@@ -67,7 +67,7 @@
             {
                 ?>
                   <div class="alert alert-success">
-                    <strong>No active prijects to display.</strong> 
+                    <strong>Нема активни проекти.</strong> 
                  </div>
                                 
                 <?php
@@ -80,7 +80,12 @@
                 ?>
                 <div class="panel panel-success">
                     <div  class="panel-heading"><?php echo $project['ProjectName'] ?></div>
-                    <div class="panel-body"><?php echo $project['Discription'] ?></div>
+                    <div class="panel-body">
+                        <?php echo $project['Discription'] ?>
+                        <a href="<?php echo $project['sourceLink'] ?>"> Резултат </a>
+                        
+                    </div>
+                    
 
                 </div>
             <?php
