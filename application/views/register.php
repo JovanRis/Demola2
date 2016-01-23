@@ -40,6 +40,7 @@
 </script>
 
 <div id="main">
+<div class = 'container'>
     <h2>Register an account</h2>
         <form id='registerForm' action='register' method='POST' onsubmit='return checkForm(this);'>
             <fieldset>
@@ -88,5 +89,5 @@
                
             </fieldset>
         </form>
-        
+        </div>
      </div>

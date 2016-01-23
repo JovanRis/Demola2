@@ -4,10 +4,10 @@
                   <!-- Ako e najaven kako Kompanija da mozi da dodaj  -->
                   <button onclick="location.href='NewProject'" type='button' class='btn btn-success btn-md'>New Project</button>
                   <!-- Ovde ce se iscituvaat proektite so bile napraeni prethodno -->
-                  <button type='button' class='btn btn-success btn-md'>Coding</button>
-                  <button type='button' class='btn btn-success btn-md'>Desing</button>
-                  <button type='button' class='btn btn-success btn-md'>Comunications</button>
-                  <button type='button' class='btn btn-success btn-md'>Education</button>
+                  <button type='button' class='btn btn-success btn-md' onclick= " location.href='project?p=coding'; " >Coding</button>
+                  <button type='button' class='btn btn-success btn-md' onclick= " location.href='project?p=design'; ">Desing</button>
+                  <button type='button' class='btn btn-success btn-md' onclick= " location.href='project?p=communication'; ">Comunications</button>
+                  <button type='button' class='btn btn-success btn-md' onclick= " location.href='project?p=education'; ">Education</button>
                </div>
             </div>
             <div class='col-md-8'>

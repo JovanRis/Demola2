@@ -11,7 +11,7 @@ class Controller_Project extends Controller
         $session = Session::instance();
         if ($session->get('userType') == 'company') {
             
-            //array_push($args,$showCreateProject);
+            $showCreateProject = true;
         }
         
         if ($this->request->query('p'))

@@ -1,8 +1,7 @@
 <div id="main">
+<div class='container'>
     <h2>Login</h2>
 
-
-        <div class = 'container'>
         <form id='loginForm' role='form' action='login' method='POST'>
         
             <fieldset>
@@ -21,7 +20,7 @@
             
         </fieldset>
         </form>
-        </div>;
+        </div>
     
     
 </div>
