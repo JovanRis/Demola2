@@ -42,6 +42,26 @@
 <div id="main">
 <div class = 'container'>
     <h2>Register an account</h2>
+    <?php
+    if($ret != '')
+    {
+        echo $ret;
+        ?>
+    </div>  <!-- closes container div -->
+    </div>  <!-- closes main div -->
+        <?php
+        if(strpos($ret, 'already') !== false)
+        {
+            header("Refresh:2; url=register");
+        }
+        else
+        {
+            header("Refresh:2; url=login");
+        }
+
+    }
+    ?>
+    
         <form id='registerForm' action='register' method='POST' onsubmit='return checkForm(this);'>
             <fieldset>
                 <legend>Register an account</legend>

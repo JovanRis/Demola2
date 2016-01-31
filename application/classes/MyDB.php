@@ -39,13 +39,25 @@ class MyDB extends Model
     
     public static function registerStudent($user,$pwhash,$firstname, $lastname, $email)
     {
-        $result = DB::insert('Student', array('Username', 'pwHash', 'firstname', 'lastname', 'email'))->values(array($user, $pwhash, $firstname, $lastname, $email))->execute();
-        
-        if($result[1] == 1){
-            return true;
+        $status = '';
+        try
+        {
+            $result = DB::insert('Student', array('Username', 'pwHash', 'firstname', 'lastname', 'email'))
+                        ->values(array($user, $pwhash, $firstname, $lastname, $email))
+                        ->execute();
+                        
+            if($result[1] == 1){
+                $status = "Student registration successful";
+            }
+        } catch (Exception $e)
+        {
+            if($e->getCode() == 1062)
+            {
+                $status = "Student username already exists";
+            }
         }
-        return false;
         
+        return $status;
         
         /*$user = $this->conn->real_escape_string($user);
         $pwhash = $this->conn->real_escape_string($pwhash);
@@ -123,6 +135,29 @@ class MyDB extends Model
     
     public static function registerCompany($user,$pwhash,$details,$email,$imgUrl)
     {
+        $status = '';
+        try
+        {
+            $result = DB::insert('Company', array('CompanyName', 'CompanyPass', 'CompanyDetails', 'email', 'imgUrl'))
+                        ->values(array($user, $pwhash, $details, $email, $imgUrl))
+                        ->execute();
+                        
+            if($result[1] == 1){
+                $status = "Company registration successful";
+            }
+        } catch (Exception $e)
+        {
+            if($e->getCode() == 1062)
+            {
+                $status = "Company username already exists";
+            }
+        }
+        
+        return $status;
+        
+        
+        
+        
         $result = DB::insert('Company', array('CompanyName', 'CompanyPass', 'CompanyDetails', 'email', 'imgUrl'))->values(array($user, $pwhash, $details, $email, $imgUrl))->execute();
         
         if($result[1] == 1){

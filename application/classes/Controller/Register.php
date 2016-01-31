@@ -6,7 +6,7 @@ class Controller_Register extends Controller
 	public function action_index()
 	{
 	    $post = $this->request->post();
-	    
+	    $ret = '';
 	    if(isset($post['submit']))
         {
             $firstname = $post['firstname'];
@@ -21,34 +21,14 @@ class Controller_Register extends Controller
             
             if($radioCheck == "student")
             {
-                 
-                 if(User::register($username,$password,$firstname, $lastname, $email))
-                 {
-                      echo "User register successful";
-                 }
-                 else
-                 {
-                      echo "User register error";
-                 }
-                 
+                $ret = User::register($username,$password,$firstname, $lastname, $email);
             }
             elseif ($radioCheck == "company") 
             {
-               
-                
-                if(Company::register($username,$password,$comDetails,$email,$comImg))
-                {
-                      echo "Company register successful";
-                 }
-                 else
-                 {
-                      echo "Company register error";
-                 }
+                $ret = Company::register($username,$password,$comDetails,$email,$comImg);
             } 
         }
-        else
-        {
-            $this->response->body(View::factory('header').View::factory('register'));
-        }
+        $this->response->body(View::factory('header').View::factory('register')->set('ret', $ret));
+
 	}
 }
