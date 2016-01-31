@@ -6,7 +6,7 @@ class Controller_Welcome extends Controller {
 	{
 	    $session = Session::instance();
 	    
-	    print_r(Company::checkIfApproved($session->get('userId')));
+	    //print_r(Company::checkIfApproved($session->get('userId')));
 	    //print_r($session);
 	    $projects = array();
 	    $projects = MyDB::getCompletedProjects();

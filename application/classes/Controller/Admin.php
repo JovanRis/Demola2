@@ -47,29 +47,49 @@ class Controller_Admin extends Controller {
             {
                 if(isset($post['submit-approvecompany']))
                 {
-                    foreach($post['iCom'] as $idCom)
+                    if(isset($post['iCom']))
                     {
-                        Admin::approveCompany($idCom);
+                        foreach($post['iCom'] as $idCom)
+                        {
+                            Admin::approveCompany($idCom);
+                        }
+                        echo "Companies approved";
                     }
-                    echo "Companies approved";
+                    else
+                    {
+                        echo "Must select companies for approval";
+                    }
+
                     header("Refresh:2; url=admin?p=null");
                 }
                 elseif(isset($post['submit-approveproject']))
                 {
-                    foreach($post['iPro'] as $idPro)
+                    if(isset($post['iPro']))
                     {
-                        Admin::approveProject($idPro);
+                        foreach($post['iPro'] as $idPro)
+                        {
+                            Admin::approveProject($idPro);
+                        }
+                        echo "Projects approved";
                     }
-                    echo "Projects approved";
+                    else {
+                        echo "Must select projects for approval";
+                    }
                     header("Refresh:2; url=admin?p=null");
                 }
                 elseif(isset($post['submit-finishproject']))
                 {
-                    foreach($post['iPro'] as $idPro)
+                    if(isset($post['iPro']))
                     {
-                        Admin::finishProject($idPro,$post['linkPro'.$idPro]);
+                        foreach($post['iPro'] as $idPro)
+                        {
+                            Admin::finishProject($idPro,$post['linkPro'.$idPro]);
+                        }
+                        echo "Projects finished";
                     }
-                    echo "Projects finished";
+                    else {
+                        echo "Must select projects to be finished";
+                    }
                     header("Refresh:2; url=admin?p=null");
                 }
             }
