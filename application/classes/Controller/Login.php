@@ -13,13 +13,13 @@ class Controller_Login extends Controller {
             $loginSuccess = Auth::instance()->login($user,$pass, false);
             if($loginSuccess == true)
             {
-                $this->response->body(View::factory('header')."<br>login successfull <br> logged in as: ".$_SESSION['userType']);
+                $this->response->body(View::factory('header')."<div id = 'alertDiv' class='alert alert-success'> Loggin successfull ,Logged in as : <strong>".$_SESSION['userType']);
                 
-                header("Refresh:2; url=welcome");
+                header("Refresh:4; url=Welcome");
             }
             else {
-                $this->response->body(View::factory('header')."<br>wrong username or password");
-                header("Refresh:2; url=login");
+                $this->response->body(View::factory('header')."<div id = 'alertDiv' class='alert alert-success'> <strong> Wrong Username or Password </strong>, please try again. </div>");
+               header("Refresh:4; url=login");
             }
             
         }

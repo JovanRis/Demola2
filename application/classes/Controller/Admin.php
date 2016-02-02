@@ -31,11 +31,15 @@ class Controller_Admin extends Controller {
                 
                 if($loginSuccess == true)
                 {
-                    echo "login successfull <br> logged in as: ".$session->get('userType');
+                    echo '<script language="javascript">';
+                    echo 'alert("Loggin successfully  as Admin ")';
+                    echo '</script>';
                     header("Refresh:2; url=admin?p=null");
                 }
                 else {
-                    echo "wrong username or password";
+                   echo '<script language="javascript">';
+                    echo 'alert("Wrong  Username or Password , please try again.")';
+                    echo '</script>';
                 }
 	        }
 
@@ -57,7 +61,9 @@ class Controller_Admin extends Controller {
                     }
                     else
                     {
-                        echo "Must select companies for approval";
+                    echo '<script language="javascript">';
+                    echo 'alert("Must select companies for approval ")';
+                    echo '</script>';
                     }
 
                     header("Refresh:2; url=admin?p=null");
@@ -73,7 +79,9 @@ class Controller_Admin extends Controller {
                         echo "Projects approved";
                     }
                     else {
-                        echo "Must select projects for approval";
+                    echo '<script language="javascript">';
+                    echo 'alert("Must select project for approval ")';
+                    echo '</script>';
                     }
                     header("Refresh:2; url=admin?p=null");
                 }
@@ -88,7 +96,9 @@ class Controller_Admin extends Controller {
                         echo "Projects finished";
                     }
                     else {
-                        echo "Must select projects to be finished";
+                    echo '<script language="javascript">';
+                    echo 'alert("Must select project to be finished. ")';
+                    echo '</script>';
                     }
                     header("Refresh:2; url=admin?p=null");
                 }

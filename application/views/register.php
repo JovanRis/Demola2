@@ -41,7 +41,7 @@
 
 <div id="main">
 <div class = 'container'>
-    <h2>Register an account</h2>
+   
     <?php
     if($ret != '')
     {
@@ -50,13 +50,13 @@
     </div>  <!-- closes container div -->
     </div>  <!-- closes main div -->
         <?php
-        if(strpos($ret, 'already') !== false)
+        if(strpos($ret, 'already') != false)
         {
-            header("Refresh:2; url=register");
+            header("Refresh:4; url=login");
         }
         else
         {
-            header("Refresh:2; url=login");
+            header("Refresh:4; url=register");
         }
 
     }
@@ -82,7 +82,7 @@
                 
                 
                 <li id="companyDetailsItem" style="display:none;">
-                    <label for='companyDetails'>Company details:</label> 
+                    <label for='companyDetails'>Company Name:</label> 
                     <input type='text' class='form-control' name='companyDetails' value='' id='companyDetails' />
                 </li>
                 <li id="companyImgItem" style="display:none;">

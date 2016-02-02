@@ -48,7 +48,8 @@ nav, section {
 #main {
    
 
-    margin-left:  auto;
+   /* margin-left:  auto;*/
+   margin-left: 5%;
     margin-right: auto;
     width: 80%;
     height: 80%;
@@ -96,7 +97,12 @@ footer {
         list-style: none;
     }
 
-
+    #alertDiv {
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 5%;
+        
+    }
 /* menu
 ----------------------------------------------------------*/
 ul#menu {
@@ -166,6 +172,7 @@ section.feature {
 
 /* forms */
 fieldset {
+    min-width: 5px !important;
     border: none;
     margin: 0;
     padding: 0;
@@ -266,3 +273,6 @@ ul#social li {
       border-bottom-right-radius: 0;
       border-bottom-left-radius: 0;
   }
+.wall {
+    background-color: none !important;
+}

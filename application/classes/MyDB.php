@@ -47,13 +47,13 @@ class MyDB extends Model
                         ->execute();
                         
             if($result[1] == 1){
-                $status = "Student registration successful";
+                $status = "<div id='alertDiv' class='alert alert-success'> <strong> Student registration successful </strong> </div>";
             }
         } catch (Exception $e)
         {
             if($e->getCode() == 1062)
             {
-                $status = "Student username already exists";
+                $status = "<div id='alertDiv' class='alert alert-success'><strong> Student Username alredy exsist </strong>, please try again. </div>";
             }
         }
         
@@ -143,13 +143,13 @@ class MyDB extends Model
                         ->execute();
                         
             if($result[1] == 1){
-                $status = "Company registration successful";
+                $status = "<div id='alertDiv' class='alert alert-success'> <strong> Company registration successful </strong> </div>";
             }
         } catch (Exception $e)
         {
             if($e->getCode() == 1062)
             {
-                $status = "Company username already exists";
+                $status = "<div id='alertDiv' class='alert alert-success'> <strong> Company username already exists </string></div>";
             }
         }
         

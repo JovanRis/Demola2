@@ -1,9 +1,9 @@
 <div id="main">
 <div class='container'>
-    <h2>Login</h2>
+   
 
         <form id='loginForm' role='form' action='login' method='POST'>
-        
+         <h2>Login</h2>
             <fieldset>
             <legend>Log on</legend>
             <ol>

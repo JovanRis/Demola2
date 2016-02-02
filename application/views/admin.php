@@ -51,7 +51,7 @@ td { padding: 5px; }
                                     foreach($inactiveCompanies as $iCom){
                                      ?>
                                      <tr>
-                                         <td> <?php echo $iCom['CompanyName'] ?></td> <td><input type='checkbox' class='form-control' name='iCom[]' value="<?php echo $iCom['id_pk'] ?>" /> </td>
+                                         <td> <h4><span class="label label-default"><?php echo $iCom['CompanyName'] ?></span></h4></td> <td><input type='checkbox' class='form-control' name='iCom[]' value="<?php echo $iCom['id_pk'] ?>" /> </td>
                                      </tr>
                                      <?php
                                     }
@@ -74,7 +74,7 @@ td { padding: 5px; }
                                     foreach($inactiveProjects as $iPro){
                                      ?>
                                      <tr>
-                                        <td> <?php echo $iPro['ProjectName'] ?> </td> <td><input type='checkbox' class='form-control' name='iPro[]' value="<?php echo $iPro['id_pk'] ?>" /> </td>
+                                        <td><h4><span class="label label-default"><?php echo $iPro['ProjectName'] ?></strong></h4></td> <td><input type='checkbox' class='form-control' name='iPro[]' value="<?php echo $iPro['id_pk'] ?>" /> </td>
                                      </tr>
                                      <?php
                                     }
@@ -100,7 +100,7 @@ td { padding: 5px; }
                                         if($Pro['completed'] == '0'){
                                      ?>
                                      <tr>
-                                        <td> <?php echo $Pro['ProjectName'] ?> </td> <td><input type='text' class = 'form-control' name = 'linkPro<?php echo $Pro['id_pk']; ?>' /></td> <td><input type='checkbox' class='form-control' name='iPro[]' value="<?php echo $Pro['id_pk'] ?>" /></td> 
+                                        <td><?php echo $Pro['ProjectName'] ?></td> <td><input type='text' class = 'form-control' name = 'linkPro<?php echo $Pro['id_pk']; ?>' /></td> <td><input type='checkbox' class='form-control' name='iPro[]' value="<?php echo $Pro['id_pk'] ?>" /></td> 
                                      </tr>
                                      <?php
                                         }

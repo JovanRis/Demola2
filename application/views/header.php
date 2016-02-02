@@ -44,7 +44,7 @@
                 
                 if(isset($_SESSION['auth_user']))
                 {
-                    echo "<li>".$_SESSION['auth_user']." <a href='".URL::base()."login?logout=true' class='btn btn-success'>Logout</a>  </li>";
+                    echo "<li><button type=button' class='btn btn-success'> <span class='badge'>".$_SESSION['auth_user']."</span></button> <a href='".URL::base()."login?logout=true' class='btn btn-success btn-md'>Logout</a>  </li>";
                 }
                 else {
                     echo '<li><a class="btn btn-success" href="login"><span class="glyphicon glyphicon-user"></span> Login</a></li>' . "\n";

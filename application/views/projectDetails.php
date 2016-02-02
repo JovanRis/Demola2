@@ -11,7 +11,7 @@
         </div>
         <div class="panel-footer" >
                 <div>
-        Currently signed up:
+        <span  class="badge">Currently signed up: </span>
         <?php 
         if(is_array($currentProject['SignedUp']))
         {
@@ -29,7 +29,7 @@
         <?php
         if($currentProject['fk_CompanyID'] == $userId || $userType == 'student'){ ?>
         <div>
-        Comments:
+        <span  class="badge">Comments:</span>
         <?php 
         if(is_array($currentProject['Comments']))
         {
