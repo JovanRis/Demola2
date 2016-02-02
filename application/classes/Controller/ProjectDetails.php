@@ -13,11 +13,11 @@ class Controller_ProjectDetails extends Controller {
 	    if(isset($post['submit']))
 	    {
             if(Project::addComment($post['projectID'],$post['comment'],$post['clientTime'])){
-                echo "Коментарот е додаден";
+                echo "<div id = 'alertDiv' class='alert alert-success'>Comment was added </div>";
                 header("Refresh:2; url=projectDetails?pid=".$_POST['projectID']);
             }
             else{
-                echo "Коментарот не е додаден";
+                echo "<div id = 'alertDiv' class='alert alert-success'>Comment wasn't added </div>";
                 header("Refresh:2; url=projectDetails?pid=".$_POST['projectID']);
             }
         }
@@ -27,14 +27,15 @@ class Controller_ProjectDetails extends Controller {
                 $r = Project::signUpForProject($this->request->query('signup'),$_SESSION['userId']);
                 $res = '';
                 if($r){
-                    $res = "<div style ='margin:50px;'>Signed up successfully!</div>";
+                    $res = "<div id = 'alertDiv' class='alert alert-success'>Signed up successfully!";
+                   
                 }
                 else {
-                    $res = "<div style ='margin:50px;'>Signup failed!</div>";
+                    $res = "<div id = 'alertDiv' class='alert alert-success'>Signed up failed!";
                 }
             }
             else{
-                $res = "<div style ='margin:50px;'>Please sign In</div>";             //ova ne se gleda bez margini
+                $res = "<div id = 'alertDiv' class='alert alert-success'>Please sign In</div>";             //ova ne se gleda bez margini
             }
             $this->response->body(View::factory('header').$res);
                             header("Refresh:2; url=welcome");

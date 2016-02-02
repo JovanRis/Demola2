@@ -1,5 +1,4 @@
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
-
+<div class = "container">
    <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -11,19 +10,19 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
           <div class="item active">
-            <img src="<?php echo URL::base() .'media/images/student1.jpg';?>" alt="Student 1" width="1200" height="700">
+            <img src="<?php echo URL::base() .'media/images/student1.jpg';?>" class="img-thumbnail" alt="Student 1" width="800" height="533">
             <div class="carousel-caption">
             </div>      
           </div>
 
           <div class="item">
-            <img src="<?php echo URL::base() .'media/images/student2.jpg';?>" alt="Student 2" width="1200" height="700">
+            <img src="<?php echo URL::base() .'media/images/student2.jpg';?>"class="img-thumbnail"  alt="Student 2" width="800" height="533">
             <div class="carousel-caption">
             </div>      
           </div>
     
           <div class="item">
-            <img src="<?php echo URL::base() .'media/images/student3.jpg';?>" alt="Student 3" width="1200" height="700">
+            <img src="<?php echo URL::base() .'media/images/student3.jpg';?>" class="img-thumbnail" alt="Student 3" width="800" height="533">
             <div class="carousel-caption">
           </div>      
       </div>
@@ -41,11 +40,11 @@
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
-</div>
+
 
 
 <div id="band" class="container text-left">
-
+  <div class="jumbotron">
   <h3> DEMOLA ФИКТ - Битола</h3>
   <p>
 Демола им нуди на студентите единствена можност да направат животен пресврт во конвенционалниот пат кон кариерата. Со Демола,имате можност да работите со мултидисциплиниран тим при решавањето на проблемите заедно со партнер компанијата.
@@ -67,7 +66,8 @@
 Компанијата може да ги откупи или лиценцира креациите на вашиот тим,па може да заработите пари.Исто така компаниите можеби ќе сакаат да го надоградите проектот.
 </p>
 </div>
+</div>
 
-
-  </div>  
+ 
+</div>
 </div> <!-- End of outer-wrapper which opens in header.php -->

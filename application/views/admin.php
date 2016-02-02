@@ -1,21 +1,24 @@
 <div id="main">
-<style>
-td { padding: 5px; }
-</style>
-
-         <div class='col-md-4'>
+    <div class = "container">
+    
+        <style>
+        td { padding: 5px; }
+        </style>
+        <div class="row">
+         <div class='col-xs-4 col-sm-4 col-md-4 col-lg-4'>
            <div class='btn-group-vertical'>
                     <button onclick="location.href='?p=approvecompany'" type='button' class='btn btn-success btn-md' id='approvecompanybtn' >Approve Companies</button>
                     <button onclick="location.href='?p=approveproject'" type='button' class='btn btn-success btn-md' id='approveprojectbtn' >Approve Projects</button>
                     <button onclick="location.href='?p=finishproject'" type='button' class='btn btn-success btn-md' id='approveprojectbtn' >Finish Projects</button>
            </div>
         </div>
-        
+  
         <?php
         if($showLogin)
         {
         ?>
-        <div class='col-md-8'>
+        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 ">
+        <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
             <form id='loginForm' role='form' action='admin' method='POST'>
                 
                     <fieldset>
@@ -43,6 +46,8 @@ td { padding: 5px; }
             if($p == 'approvecompany') 
             {
                 ?>
+                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 ">
+                 <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
                 <form id='approvecompany' role='form' action='admin?p=approvecompany' method = 'POST'>
                     <fieldset>
                         <legend>Approve Companies</legend>
@@ -65,7 +70,8 @@ td { padding: 5px; }
             if($p == 'approveproject') {
 
                 ?>
-                
+                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 ">
+                <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
                 <form id='approveproject' role='form' action='admin?p=approveproject' method = 'POST'>
                     <fieldset>
                         <legend>Approve Companies</legend>
@@ -90,6 +96,8 @@ td { padding: 5px; }
             if($p == 'finishproject')
             {
             ?>
+             <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 ">
+             <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
                 <form id='approveproject' role='form' action='admin?p=finishproject' method = 'POST'>
                     <fieldset>
                         <legend>Approve Companies</legend>
@@ -117,5 +125,8 @@ td { padding: 5px; }
 
             }
              ?>
+           </div>
         </div>
-    </div>
+     </div>
+     </div
+

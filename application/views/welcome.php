@@ -1,4 +1,5 @@
     <div id="main">
+     <div class = "container">
         <?php
         if($userType == 'student' OR $userType == 'company')
         {
@@ -92,5 +93,5 @@
             }
         }
         ?>
-
+</div>
 </div> <!-- End of outer-wrapper which opens in header.php -->

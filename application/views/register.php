@@ -39,7 +39,7 @@
 
 </script>
 
-<div id="main">
+<div id="mainRegister">
 <div class = 'container'>
    
     <?php

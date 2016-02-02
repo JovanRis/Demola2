@@ -1,6 +1,6 @@
-   <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+    <div class = "container">
 
-   <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -12,13 +12,13 @@
         <div class="carousel-inner" role="listbox">
 
           <div class="item active">
-            <img src="<?php echo URL::base() .'media/images/company2.jpg';?>" alt="Company 2" width="1200" height="700">
+            <img src="<?php echo URL::base() .'media/images/company2.jpg';?>" class="img-thumbnail" alt="Company 2" width="800" height="533">
             <div class="carousel-caption">
             </div>      
           </div>
     
           <div class="item">
-            <img src="<?php echo URL::base() .'media/images/company3.jpg';?>" alt="Company 3" width="1200" height="700">
+            <img src="<?php echo URL::base() .'media/images/company3.jpg';?>"class="img-thumbnail"  alt="Company 3" width="800" height="533">
             <div class="carousel-caption">
           </div>      
       </div>
@@ -38,6 +38,7 @@
     </a>
     
    <div id="band" class="container text-left">
+    <div class="jumbotron">
    <h3> DEMOLA FIKT - Companies </h3>
         <p>
         Вистинската вредност на вмрежувањето е да се знае кога да се искористат ресурсите кои се надвор од вашата компанија.
@@ -53,7 +54,8 @@
         Иако талентираните студенти се јадрото на Демола,сепак сите процеси,процедури и цели се јасно дефинирани и внимателно се следат од страна на нашите искусни консултанти.
         </p>
     </div>
+    </div>
 </div>
 
-    
+
 </div> <!-- End of outer-wrapper which opens in header.php -->

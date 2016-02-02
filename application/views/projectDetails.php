@@ -1,13 +1,13 @@
 <div id='main'>
-    
+    <div class = "container">
      <div class="panel panel-success">
        <div class="panel-heading"> <?php echo $currentProject['ProjectName'];?> </div>
        <div class="panel-body">
             <div style = "height:200px; width: 350px; display:block; float: right;"><img src="<?php echo $companyDetails['imgUrl'] ?>" alt="companyImg" style="max-height:100%; max-width:100%;"></div>
-            Компанија: <?php echo $companyDetails['CompanyName'] ?> <br>
-            Категорија: <?php echo $currentProject['Category']; ?> <br>
-            Детали за компанијата: <?php echo $companyDetails['CompanyDetails'] ?> <br>
-            Опис: <?php echo $currentProject['Discription']; ?> <br> 
+            Company: <?php echo $companyDetails['CompanyName'] ?> <br>
+            Category: <?php echo $currentProject['Category']; ?> <br>
+            Company Details: <?php echo $companyDetails['CompanyDetails'] ?> <br>
+            Description: <?php echo $currentProject['Discription']; ?> <br> 
         </div>
         <div class="panel-footer" >
                 <div>
@@ -81,8 +81,8 @@
         }
         ?>
         
-    
-    </div>
+   </div> 
+</div>
     <script type="text/javascript">
     var today = new Date();
     var dd = today.getDate();

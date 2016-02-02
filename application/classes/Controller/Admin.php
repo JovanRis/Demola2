@@ -57,7 +57,10 @@ class Controller_Admin extends Controller {
                         {
                             Admin::approveCompany($idCom);
                         }
-                        echo "Companies approved";
+                        
+                         echo '<script language="javascript">';
+                         echo 'alert("Companies approved")';
+                         echo '</script>';
                     }
                     else
                     {
@@ -76,7 +79,10 @@ class Controller_Admin extends Controller {
                         {
                             Admin::approveProject($idPro);
                         }
-                        echo "Projects approved";
+                       
+                         echo '<script language="javascript">';
+                         echo 'alert("Projects approved")';
+                         echo '</script>';
                     }
                     else {
                     echo '<script language="javascript">';
@@ -93,7 +99,10 @@ class Controller_Admin extends Controller {
                         {
                             Admin::finishProject($idPro,$post['linkPro'.$idPro]);
                         }
-                        echo "Projects finished";
+                       
+                        echo '<script language="javascript">';
+                        echo 'alert("Projects finished ")';
+                        echo '</script>';
                     }
                     else {
                     echo '<script language="javascript">';

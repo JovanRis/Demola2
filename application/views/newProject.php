@@ -1,4 +1,5 @@
    <div id="main">
+   <div class = "container">
         <div class='col-md-4'>
                <div class='btn-group-vertical'>
                   <!-- Ako e najaven kako Kompanija da mozi da dodaj  -->
@@ -40,5 +41,5 @@
             
             </div>
     </div>
-
+</div>
 </div> <!-- End of outer-wrapper which opens in header.php -->

@@ -1,5 +1,7 @@
 <div id="main">
-    <div class="col-md-2">
+<div class = "container">
+<div class="row">
+    <div class=" col-xs-2 col-sm-2 col-md-2 col-lg-2 ">
         <div class="btn-group-vertical">
             <!-- Ako e najaven kako Kompanija da mozi da dodaj  -->
             <?php
@@ -16,8 +18,8 @@
             ?>
        </div>
     </div>
-    
-    <div class="col-md-8">
+    <div class="col-xs-1 col-sm-1 "></div>
+    <div class="col-xs-8 col-sm-8 col-md-10 col-lg-10">
         <div class="well">
             <?php
                 $p = 1;
@@ -28,7 +30,7 @@
     		                continue;
     	                }
             ?>
-                <div class="col-xs-6 col-sm-4">
+                <div class="col-xs-8 col-sm-4 col-md-3 col-lg-3">
                     <div class="panel-group">
                         <div class="panel panel-success">
                             <div class="panel-heading">
@@ -63,5 +65,5 @@
                 ?>
         </div>  
     </div>
-    
+  </div>
 </div>

@@ -13,7 +13,11 @@ body {
     height: 100%;
 }
 
-
+ html {
+overflow-y: scroll;
+overflow-x: hidden;
+     
+ }
 
 header{
     background-color: white;
@@ -48,14 +52,17 @@ nav, section {
 #main {
    
 
-   /* margin-left:  auto;*/
-   margin-left: 5%;
+    margin-left:  auto;
+  /* margin-left: 5%;*/
     margin-right: auto;
     width: 80%;
     height: 80%;
     
 }
-
+#mainRegister {
+    
+    margin-left:4%;
+}
    
 footer { 
    
@@ -251,7 +258,7 @@ ul#social li {
     .carousel-inner img {
       -webkit-filter: grayscale(90%);
       filter: grayscale(90%); /* make all photos black and white */ 
-      width: 100%; /* Set width to 100% */
+       /* Set width to 100% */
       margin: auto;
   }
   .carousel-caption h3 {
@@ -275,4 +282,30 @@ ul#social li {
   }
 .wall {
     background-color: none !important;
+}
+
+.carousel-control{
+    
+bottom:inherit !important;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .jumbotron p{
+        font-size: 0.5em !important;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .jumbotron  p{
+        font-size: 0.8em !important;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .jumbotron p {
+        font-size: 1em !important;
+    }
 }

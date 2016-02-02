@@ -1,4 +1,4 @@
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+    <div class = "container">
 
    <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -12,13 +12,13 @@
         <div class="carousel-inner" role="listbox">
 
           <div class="item active">
-            <img src="<?php echo URL::base() .'media/images/fikt1.jpg';?>" alt="Fikt 1" width="1200" height="700">
+            <img src="<?php echo URL::base() .'media/images/fikt1.jpg';?>" class="img-thumbnail" alt="Fikt 1" width="800" height="533">
             <div class="carousel-caption">
             </div>      
           </div>
     
           <div class="item">
-            <img src="<?php echo URL::base() .'media/images/fikt2.jpg';?>" alt="Fikt 2" width="1200" height="700">
+            <img src="<?php echo URL::base() .'media/images/fikt2.jpg';?>"class="img-thumbnail"  alt="Fikt 2" width="800" height="533">
             <div class="carousel-caption">
           </div>      
       </div>
@@ -38,6 +38,7 @@
     </a>
     
    <div id="band" class="container text-left">
+    <div class="jumbotron">
    <h3> DEMOLA FIKT  </h3>
         <p>
         За факултетите,Демола нуди можност за изградба на одржливи односи со компаниите и им ја нуди потребната гледна  точка за потребите на пазарот.
@@ -53,7 +54,7 @@
             </div>
         </div>
 
-    
+  </div>  
 </div> <!-- End of outer-wrapper which opens in header.php -->
 <?php 
  ?>
