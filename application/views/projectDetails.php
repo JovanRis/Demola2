@@ -1,88 +1,92 @@
 <div id='main'>
     <div class = "container">
-     <div class="panel panel-success">
-       <div class="panel-heading"> <?php echo $currentProject['ProjectName'];?> </div>
-       <div class="panel-body">
-            <div style = "height:200px; width: 350px; display:block; float: right;"><img src="<?php echo $companyDetails['imgUrl'] ?>" alt="companyImg" style="max-height:100%; max-width:100%;"></div>
-            Company: <?php echo $companyDetails['CompanyName'] ?> <br>
-            Category: <?php echo $currentProject['Category']; ?> <br>
-            Company Details: <?php echo $companyDetails['CompanyDetails'] ?> <br>
-            Description: <?php echo $currentProject['Discription']; ?> <br> 
-        </div>
-        <div class="panel-footer" >
+    <?php 
+    if($res != '')
+    {
+        echo $res;
+    }
+    else 
+    {
+    ?>
+    
+        <div class="panel panel-success">
+            <div class="panel-heading"> <?php echo $currentProject['ProjectName'];?> </div>
+            <div class="panel-body">
+                <div style = "height:200px; width: 350px; display:block; float: right;"><img src="<?php echo $companyDetails['imgUrl'] ?>" alt="companyImg" style="max-height:100%; max-width:100%;"></div>
+                Company: <?php echo $companyDetails['CompanyName'] ?> <br>
+                Category: <?php echo $currentProject['Category']; ?> <br>
+                Company Details: <?php echo $companyDetails['CompanyDetails'] ?> <br>
+                Description: <?php echo $currentProject['Discription']; ?> <br> 
+            </div>
+            <div class="panel-footer" >
                 <div>
-        <span  class="badge">Currently signed up: </span>
-        <?php 
-        if(is_array($currentProject['SignedUp']))
-        {
-            foreach($currentProject['SignedUp'] as $student){                           //Prijaveni studenti
-                echo "<div class='panel-footer' >".$student['firstname']." ".$student['lastname']."</div>";
+                <span  class="badge">Currently signed up: </span>
+            <?php 
+            if(is_array($currentProject['SignedUp']))
+            {
+                foreach($currentProject['SignedUp'] as $student){                           //Prijaveni studenti
+                    echo "<div class='panel-footer' >".$student['firstname']." ".$student['lastname']."</div>";
+                }
             }
-        }
-        else
-        {
-            echo $currentProject['SignedUp'].' </div>';    
-        }
-        ?>
-        
-        
-        <?php
-        if($currentProject['fk_CompanyID'] == $userId || $userType == 'student'){ ?>
-        <div>
-        <span  class="badge">Comments:</span>
-        <?php 
-        if(is_array($currentProject['Comments']))
-        {
-            foreach($currentProject['Comments'] as $comment){                           //komentari od kompanija
-                echo "<div class='panel-footer' >".$comment['Comment']." ".$comment['Date_Created']."</div>";
+            else
+            {
+                echo $currentProject['SignedUp'].' </div>';    
             }
-        }
-        else
-        {
-            echo $currentProject['Comments'].'</div>';
-        }
-        ?>
-        
-        </div>
-        
-        
-      </div>
-      
-
-
-        
-        <?php } ?>
-        
-        
-        <?php
-        if(count($currentProject['SignedUp']) < $studentsPerProject && $currentProject['completed'] == 0 AND $userType == 'student'){               //button za signup ako ima mesto
-        ?>
-            <button type='button' style='margin-right: 60px;' class='btn btn-success btn-md' onclick="location.href='?signup= <?php echo $projectID ?>'">Sign Up</button>
-       <?php 
-        }
-        ?>
-        
-        
-          
-        <?php   //del za komentari / izvestuvajna od kompanija
-        if($currentProject['fk_CompanyID'] == $userId AND $userType == 'company'){
-        ?>
-        <div>
-            <form id='loginForm' role='form' action='projectDetails' method='POST'>
-                <label for='comment'>Comment:</label>
-                <textarea rows="4" cols="50" class='form-control' name='comment' value='' id='comment' ></textarea>
-                <input type='text' style = "display:none;" name = "projectID" value="<?php echo $currentProject['id_pk']; ?>">
-                <input type='text' style = "display:none;" name = "clientTime" id="clientTime">
-
-                <input type='submit' class='btn btn-default' name='submit' value='Add comment' />
-            </form>
-        </div>
-        <?php
-        }
-        ?>
+            ?>
+            
+            
+            <?php
+            if($currentProject['fk_CompanyID'] == $userId || $userType == 'student'){ ?>
+            <div>
+            <span  class="badge">Comments:</span>
+            <?php 
+            if(is_array($currentProject['Comments']))
+            {
+                foreach($currentProject['Comments'] as $comment){                           //komentari od kompanija
+                    echo "<div class='panel-footer' >".$comment['Comment']." ".$comment['Date_Created']."</div>";
+                }
+            }
+            else
+            {
+                echo $currentProject['Comments'].'</div>';
+            }
+            ?>
+            
+            </div>
+            
+            
+          </div>
+            <?php } ?>
+            <?php
+            if(count($currentProject['SignedUp']) < $studentsPerProject && $currentProject['completed'] == 0 AND $userType == 'student'){               //button za signup ako ima mesto
+            ?>
+                <button type='button' style='margin-right: 60px;' class='btn btn-success btn-md' onclick="location.href='?signup= <?php echo $projectID ?>'">Sign Up</button>
+           <?php 
+            }
+            ?>
+            <?php   //del za komentari / izvestuvajna od kompanija
+            if($currentProject['fk_CompanyID'] == $userId AND $userType == 'company'){
+            ?>
+            <div>
+                <form id='loginForm' role='form' action='projectDetails' method='POST'>
+                    <label for='comment'>Comment:</label>
+                    <textarea rows="4" cols="50" class='form-control' name='comment' value='' id='comment' ></textarea>
+                    <input type='text' style = "display:none;" name = "projectID" value="<?php echo $currentProject['id_pk']; ?>">
+                    <input type='text' style = "display:none;" name = "clientTime" id="clientTime">
+    
+                    <input type='submit' class='btn btn-default' name='submit' value='Add comment' />
+                </form>
+            </div>
+            <?php
+            }
+            
+    }
+            ?>
+            
         
    </div> 
 </div>
+
     <script type="text/javascript">
     var today = new Date();
     var dd = today.getDate();

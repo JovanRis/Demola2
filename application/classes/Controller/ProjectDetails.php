@@ -9,17 +9,19 @@ class Controller_ProjectDetails extends Controller {
 	    $session = Session::instance();
 	    //$this->request->query('p')
 	    //print_r($session);
-	    
+	    $res = '';
 	    if(isset($post['submit']))
 	    {
             if(Project::addComment($post['projectID'],$post['comment'],$post['clientTime'])){
-                echo "<div id = 'alertDiv' class='alert alert-success'>Comment was added </div>";
+                $res = "<div id = 'alertDiv' class='alert alert-success'>Comment was added </div>";
                 header("Refresh:2; url=projectDetails?pid=".$_POST['projectID']);
             }
             else{
-                echo "<div id = 'alertDiv' class='alert alert-success'>Comment wasn't added </div>";
+                $res = "<div id = 'alertDiv' class='alert alert-success'>Comment wasn't added </div>";
                 header("Refresh:2; url=projectDetails?pid=".$_POST['projectID']);
             }
+            $this->response->body(View::factory('header').View::factory('projectDetails')
+            ->set('res', $res));
         }
         elseif (isset($_GET['signup'])) 
         {   //if signing up for project execute this
@@ -37,7 +39,8 @@ class Controller_ProjectDetails extends Controller {
             else{
                 $res = "<div id = 'alertDiv' class='alert alert-success'>Please sign In</div>";             //ova ne se gleda bez margini
             }
-            $this->response->body(View::factory('header').$res);
+            $this->response->body(View::factory('header').View::factory('projectDetails')
+            ->set('res', $res));
                             header("Refresh:2; url=welcome");
         }
         else
@@ -53,7 +56,8 @@ class Controller_ProjectDetails extends Controller {
             ->set('projectID', $projectID)
             ->set('studentsPerProject', $studentsPerProject)
             ->set('userType',$session->get('userType'))
-            ->set('userId', $session->get('userId')));
+            ->set('userId', $session->get('userId'))
+            ->set('res', $res));
         }
 	}
 
