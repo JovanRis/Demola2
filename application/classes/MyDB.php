@@ -40,6 +40,12 @@ class MyDB extends Model
     public static function registerStudent($user,$pwhash,$firstname, $lastname, $email)
     {
         $status = '';
+        $freeusercheck = DB::select('CompanyName')->from('Company')->where('CompanyName', '=', $user)->execute();
+        if(count($freeusercheck) == 1)
+        {
+            $status = "<div id='alertDiv' class='alert alert-success'><strong>Username already exsist </strong>, please try again. </div>";
+            return $status;
+        }
         try
         {
             $result = DB::insert('Student', array('Username', 'pwHash', 'firstname', 'lastname', 'email'))
@@ -53,7 +59,7 @@ class MyDB extends Model
         {
             if($e->getCode() == 1062)
             {
-                $status = "<div id='alertDiv' class='alert alert-success'><strong> Student Username alredy exsist </strong>, please try again. </div>";
+                $status = "<div id='alertDiv' class='alert alert-success'><strong> Student Username already exsist </strong>, please try again. </div>";
             }
         }
         
@@ -136,6 +142,12 @@ class MyDB extends Model
     public static function registerCompany($user,$pwhash,$details,$email,$imgUrl)
     {
         $status = '';
+        $freeusercheck = DB::select('Username')->from('Student')->where('Username', '=', $user)->execute();
+        if(count($freeusercheck) == 1)
+        {
+            $status = "<div id='alertDiv' class='alert alert-success'><strong>Username already exsist </strong>, please try again. </div>";
+            return $status;
+        }
         try
         {
             $result = DB::insert('Company', array('CompanyName', 'CompanyPass', 'CompanyDetails', 'email', 'imgUrl'))
