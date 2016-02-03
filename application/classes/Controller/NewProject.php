@@ -35,7 +35,7 @@ class Controller_NewProject extends Controller
             }
             else 
             {
-                $this->response->body(View::factory('header')."<div id = 'alertDiv' class='alert alert-success'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> Company is not aproved by : <strong> Administrator  </strong></div> ");
+                $this->response->body(View::factory('header')."<div id = 'alertDiv' class='alert alert-success'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> Company is not aproved by: <strong> Administrator  </strong></div> ");
             }
         }
         else

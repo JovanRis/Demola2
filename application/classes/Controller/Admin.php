@@ -32,13 +32,13 @@ class Controller_Admin extends Controller {
                 if($loginSuccess == true)
                 {
                     echo '<script language="javascript">';
-                    echo 'alert("Loggin successfully  as Admin ")';
+                    echo 'alert("Loggin successfully as Admin. ")';
                     echo '</script>';
                     header("Refresh:2; url=admin?p=null");
                 }
                 else {
                    echo '<script language="javascript">';
-                    echo 'alert("Wrong  Username or Password , please try again.")';
+                    echo 'alert("Wrong  Username or Password, please try again.")';
                     echo '</script>';
                 }
 	        }

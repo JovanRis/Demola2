@@ -83,7 +83,7 @@
                     <div  class="panel-heading"><?php echo $project['ProjectName'] ?></div>
                     <div class="panel-body">
                         <?php echo $project['Discription'] ?>
-                        <a href="<?php echo $project['sourceLink'] ?>"> Resolt: </a>
+                        <a href="<?php echo $project['sourceLink'] ?>"> Source link </a>
                         
                     </div>
                     
