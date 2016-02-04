@@ -45,25 +45,26 @@
 
 <div id="band" class="container text-left">
   <div class="jumbotron">
-  <h3> DEMOLA ФИКТ - Битола</h3>
-  <p>
-Демола им нуди на студентите единствена можност да направат животен пресврт во конвенционалниот пат кон кариерата. Со Демола,имате можност да работите со мултидисциплиниран тим при решавањето на проблемите заедно со партнер компанијата.
+  <h3>DEMOLA FICT- Students</h3>
+<p>
+<h4>Why Just Study Cases When You Can Create Cases For Others To Study?</h4>
+<p>Demola offers university students a unique opportunity to add some real-life twist into the conventional path towards a career. 
+At Demola, you will work in a project with a multidisciplinary team solving real-life cases together with partner companies. And yes, it’s all part of your degree program.</p>
 </p>
 <p>
-Кој може да се приклучи?
-Секој студент може да се приклучи на Демола.Ние трагаме по вариабилност,па затоа не е важно на која програма студирате,Демола работи на вештините,идеите и талентите на студентите од различни области.
+<h4>Who Can Join?</h4>
+<p>Any student of our partner universities can join Demola. Because we look for variety, it doesn’t matter in which degree program you are studying. Demola runs on the skills, ideas, and talent of students with various backgrounds.</p>
 </p>
 <p>
-Демола тимовите работат на реални проблеми заедно со партнер компаниите.На пример,тимовите  креираат бизнис концепти,развиваат нови производи,и градат демонстрации и прототипи.
-Ние применуваме демола метод,што значи дека сите проекти имаат јасна стуктура,закажана и олеснета.Со сето ова се добиваат бараните резултати.
+<h4>Work On Real Cases</h4>
+<p>Demola teams work on real-life cases together with partner companies. For instance, teams create and refine business concepts, develop new products, or build demos and prototypes.
+We apply the Demola Method, which means that all projects are clearly structured, scheduled, and facilitated. This is co-creation done right, yielding real results.
+Make no mistake about it; Demola projects do require an effort. Here you can put your skills to the rest, but you will also gain invaluable experience, insight, and new contacts. Maybe you will even discover your future career.</p>
 </p>
 <p>
-Демола проектите не бараат напор.Работејќи на проектите можете да се здобиете со непроценливо искуство и нови контакти.
-</p>
-<p>
-Што претставува тоа за мене?
-Сите проекти се дел од вашата програма,па вие ќе добиете поени.Исто така вашиот тим ќе биде сопсвеник на правата за секој проект.
-Компанијата може да ги откупи или лиценцира креациите на вашиот тим,па може да заработите пари.Исто така компаниите можеби ќе сакаат да го надоградите проектот.
+<h4>What’s In It For Me?</h4>
+<p>All Demola projects are a part of your degree program, and you will get credits according to your course catalog. Also, your team will own the IPR for results of each project.
+The partner company can purchase or license your team's creations, so there’s some money to be made as well. Partners may also want to continue the project for further development.</p>
 </p>
 </div>
 </div>

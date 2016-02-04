@@ -39,19 +39,29 @@
     
    <div id="band" class="container text-left">
     <div class="jumbotron">
-   <h3> DEMOLA FIKT - Companies </h3>
+   <h3> DEMOLA FIKT- Companies </h3>
         <p>
-        Вистинската вредност на вмрежувањето е да се знае кога да се искористат ресурсите кои се надвор од вашата компанија.
-         Ние имаме група на млади таленти од сите области од науката,универзитетски партнери со најнови истражувања и платформа која гарантира вистински резултати.Се што ни треба од вас се вашите предизвици.
+            <h4>Overcome Challenges And Drive Innovation With Co-Creation</h4>
+            <p>The real value in networking is to know when to use resources that are outside of your company. 
+            If you’re short on brainpower for fresh ideas and new perspectives, Demola is the answer.
+            We have an international pool of young talent from all fields of science, university partners with the latest research, and an award-winning innovation platform to guarantee real results.</p>
         </p>
         <p>
-        Вашето најмоќно оружје може да биде надвор од вашата организација.Тоа е причината зошто Демола им нуди на компаниите ,без разлика дали се работи за големи или мали компании,пристап до интернационална мрежа полна со таленти,кои со својот ентузиазам и свежи идеи можат да ги решат вашите проблеми.Во зависност од степенот и природата на проектот,вие можите да му ја препуштите работата на локалниот тим од  демола или да работите во соработка со нив.
+            <h4>Access To A Network Of Top Talent </h4>
+            <p>Your most powerful asset could be outside of your own organization. That is why Demola provides companies, big or small, access to an international network full of talent, 
+            enthusiasm, and fresh ideas that can solve your problems. Depending on the level and nature of the project, you can either assign the work to a local Demola team or have a 
+            combination of our centers working on your project.</p>
         </p>
         <p>
-        Започнувањето со демола е бесплатно.Кога работата ќе биде завршена,проектниот тим ќе ви ги претстави резултатите.Само доколку сте задоволни со резултатите,имате опција за добивање на лиценца или купување на правата од тимот.
+            <h4>Pay Only For Results</h4>
+            <p>Getting started with Demola is free of charge. After the initial setup and the work is complete, the project team will present the results to you. 
+            If, and only if, you find the results useful and valuable, you have the options to either license or purchase the rights from the team. 
+            Together with our partners, we have created and validated an IPR model that has been designed to meet the legal requirements of global corporations.</p>
         </p>
         <p>
-        Иако талентираните студенти се јадрото на Демола,сепак сите процеси,процедури и цели се јасно дефинирани и внимателно се следат од страна на нашите искусни консултанти.
+            <h4>It's Not What We Do –  It's How We Do It</h4>
+            <p>Though talented students are the core makeup of Demola, our tried &amp; tested working method is what makes us different. 
+            All procedures and processes, roles and goals are clearly defined, and closely monitored by our experienced facilitators. Productive. Hassel-free. That's the Demola way.</p>
         </p>
     </div>
     </div>

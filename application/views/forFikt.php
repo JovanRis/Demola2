@@ -41,16 +41,17 @@
     <div class="jumbotron">
    <h3> DEMOLA FIKT  </h3>
         <p>
-        За факултетите,Демола нуди можност за изградба на одржливи односи со компаниите и им ја нуди потребната гледна  точка за потребите на пазарот.
-        Деловните контакти кои ние ги обезбедуваме не се само корисни за училиштата кои се вклучени,туку и за студентите во иста толкава мера.
+           <h4>University-Business Collaboration At Its Best</h4>
+           <p>For FICT, Demola offers a way to build sustainable company relationships and a vantage point to market needs. We also offer a smooth project flow of practical real-case courses.
+           The business contacts we provide are not valuable only for the schools involved, but will directly benefit the students as well.</p>
         </p>
         <p>
-        За истражувачите,Демола претставува рудник на нови податоци,теми и идеи.
-        Демола случаите се однесуваат на идните иновации,па наместо само истражување на она што веќе го има,вие ќе ја имате видливоста на она што допрва треба да биди.
+            <h4>Implement Research And Acquire New Knowledge</h4>
+            <p>For researchers, Demola is an avenue for implementing and validating research outputs in real-life cases. It’s also a goldmine for new data, topics, and ideas.
+            At Demola theory don’t only meet practice; they interact, and knowledge flows both ways.
+            Demola cases are about future innovations, so instead of just researching what has already been, you’ll get visibility on what will happen next.</p>
         </p>
-        <p>
-        Професорите исто така можат да се вклучат во проектите што ќе им помогне да ги развијат нивните педагошки вештини и методи.Демола проектите имаат јасна и компатибилна структура,што прави лесно да можат да се додаваат проектите во било кој универзитетски каталог.
-        </p>
+
             </div>
         </div>
 
